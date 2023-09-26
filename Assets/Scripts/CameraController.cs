@@ -38,7 +38,7 @@ public class CameraController : MonoBehaviour
 
     private void Move()
     {
-        transform.position = Vector3.Lerp(transform.position, targetPosition, speed * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, targetPosition, speed * Time.fixedDeltaTime);
         if (Vector3.Distance(transform.position,targetPosition) < 0.1f)
         {
             isMove = false;
